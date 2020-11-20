@@ -6,3 +6,11 @@
 .paneljugador{
     height: 450px;
 }
+
+.header{
+    height: 50px;
+}
+
+.botones{
+    margin-top: 15px;
+}
