@@ -1,2 +1,1 @@
-# anotador
-anotador de truco web
+# Anotador de truco web.
