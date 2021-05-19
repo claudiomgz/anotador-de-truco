@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -16,36 +16,28 @@
     <title>Anotador</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">Anotador de Truco</header>
     <section class="anotador">
       <div class="anotador container-fluid border border-primary rounded">
         <div class="row">
-          <div
-            class="paneljugador col border-right d-flex justify-content-around"
-            id="panelj1"
-          ></div>
-          <div
-            class="paneljugador col border-left d-flex justify-content-around"
-            id="panelj2"
-          ></div>
-        </div>
-      </div>
-      <div class="botones d-flex justify-content-around">
-        <div class="b-j1">
-          <button type="button" class="btn btn-primary btn-sm">
-            +
-          </button>
-          <button type="button" class="btn btn-primary btn-sm">
-            +
-          </button>
-        </div>
-        <div class="b-j2">
-          <button type="button" class="btn btn-primary btn-sm">
-            +
-          </button>
-          <button type="button" class="btn btn-primary btn-sm">
-            +
-          </button>
+          <div class="paneljugador col border-right" id="panelj1">
+            <div class="header-player"><p>Jugador 1</p></div>
+            <div class="botones d-flex justify-content-around">
+              <div class="b-j1">
+                <button type="button" class="btn btn-primary btn-sm">-</button>
+                <button type="button" class="btn btn-primary btn-sm">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="paneljugador col border-left" id="panelj2">
+            <div class="header-player"><p>Jugador 2</p></div>
+            <div class="botones d-flex justify-content-around">
+              <div class="b-j2">
+                <button type="button" class="btn btn-primary btn-sm">-</button>
+                <button type="button" class="btn btn-primary btn-sm">+</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,1 +1,1 @@
-# Anotador de truco web.
+# Anotador de truco web en desarrollo.
