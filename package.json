@@ -1,0 +1,29 @@
+{
+  "name": "anotador",
+  "version": "1.0.0",
+  "description": "Anotador de truco web.",
+  "main": "anotador-truco.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiomgz/anotador.git"
+  },
+  "keywords": [
+    "app",
+    "web",
+    "anotador",
+    "truco",
+    "argentino"
+  ],
+  "author": "Claudio Monguzzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudiomgz/anotador/issues"
+  },
+  "homepage": "https://github.com/claudiomgz/anotador#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
