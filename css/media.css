@@ -1,0 +1,137 @@
+@media screen and (max-width:960px) {
+    head, body, footer {
+        margin:16px
+    }
+    .simovil {
+        display: inherit;
+        color: inherit;
+    }
+    .nomovil {
+        display: none;
+    }
+    .contain-960 {
+        width: 100%;
+        margin:0px auto;
+    }
+    .contain-880 {
+        width: 100%;
+        margin:0px auto;
+    }
+    .contain-820 {
+        width: 100%;
+        margin:0px auto;
+    }
+    .contain-728 {
+        width: 100%;
+        margin:0px auto;
+    }
+    header {
+        padding: 10px 0px;
+    }
+    header .logo {
+        font-size: 22px;
+        width: 50%;
+    }
+    .menu {
+        margin-top: 10px;
+    }
+    .aplicacion .titulo-aplicacion h1 {
+        width: auto;
+        max-width: 75%;
+    }
+    .aplicacion .titulo-aplicacion img {
+        vertical-align: bottom;
+    }
+    .categoria article {
+        width: 99%;
+    }
+    .categoria a {
+        margin-right: 0px; 
+        display: inherit;
+        width: 100%;
+    }
+    .categoria .mas-categoria {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        padding: 20px;
+    }
+    .categoria .mas-categoria .simovil{
+        display: block;
+        margin:0px auto;
+    }
+    .buscador {
+        margin-top: 40px!important;
+        padding:40px;
+    }
+    .buscador input {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .caja-resultados {
+        right: 9px;
+        top: 214px;
+        width: 94%;
+        min-width: inherit;
+    }
+    .cuadrado {
+        top: 200px;
+    }
+    .caja-resultados .resultado {
+        display: flex;
+        align-items: center;
+    }
+    .buscador .close-input {
+        position: absolute;
+        top: 99px;
+    }
+    .buscador h1 {
+        font-size: 26px;
+        display: inherit;
+        text-align: center;
+    }
+    .texto .titulo-pagina {
+        padding-top: 40px;
+    }
+    #menu-desplegable {
+        top: 70px;
+    }
+    .mas-categoria-i {
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:460px) {
+    footer {
+        padding: 40px 0px 20px 0px;
+    }
+    footer .grudemi {
+        width: inherit;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    footer .links-footer {
+        float: inherit;
+    }
+    footer .links-footer a {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        width: 50%;
+        text-align: center;
+        border:0px;
+        padding: 0px 15px;
+        display: table-cell;
+    }
+    .texto .imagen-ajust {
+        width: 100%;
+        height: auto;
+    }
+  
+}
+
+@media screen and (max-width:413px) {
+    .buscador .close-input {
+        top: 132px;
+    }
+}

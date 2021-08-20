@@ -1,61 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Anotador</title>
-  </head>
-  <body>
-    <header class="header">Anotador de Truco</header>
-    <section class="anotador">
-      <div class="anotador container-fluid border border-primary rounded">
-        <div class="row">
-          <div class="paneljugador col border-right" id="panelj1">
-            <div class="header-player"><p>Jugador 1</p></div>
-            <div class="botones d-flex justify-content-around">
-              <div class="b-j1">
-                <button type="button" class="btn btn-primary btn-sm">-</button>
-                <button type="button" class="btn btn-primary btn-sm">+</button>
-              </div>
+    <head>
+        <title> Anotador de Truco Argentino</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewportMeta" />
+        <meta name="description" content="Una aplicación sencilla e intuitiva online para anotar los puntos del juego de cartas truco argentino. Selecciona partidas de 15 ó 30 puntos y anota." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large,     max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Anotador de Truco Argentino" />
+        <meta property="og:description" content="Una aplicación sencilla e intuitiva online para anotar los puntos del juego de cartas truco argentino. Selecciona partidas de 15 ó 30 puntos y anota." />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="icon" type="image/png" href="" />
+        <link rel="canonical" href="" />
+
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174265612-1');
+        </script>
+
+    </head>
+    <body>
+        <header class="contain-960">
+            <nav id="submenu">
+                <div class="menu" id="menu-boton">
+                    Menú
+                    <i id="arrow" class="arrow down"></i>
+                </div>
+                <ul id="menu-desplegable">
+                    <a href="">
+                        <li style="border-bottom: 1px solid #eee;">Inicio</li></a>
+                    <a href=""><li>menu</li></a>
+                    <a href=""><li>menu</li></a>
+                    <a href=""><li>menu</li></a>
+                    <a href=""><li>menu</li></a>
+                    <a href=""><li>menu</li></a>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <link rel="stylesheet" href="css/anotador-truco.css">
+            <script async src="anotador-truco.js"></script>
+            <div class="aplicacion contain-728">
+                <div class="titulo-aplicacion">
+                    <h1>Anotador de Truco</h1>
+                    <img width="48px" height="48px" src="anotador-de-truco.png" alt="Logo de anotador de truco online">
+                </div>
+                <div class="aplicacion-container selector-de-puntos" id="selector-puntos">
+                    <div class="titulo">¿A cuántos puntos es la partida?</div>
+                    <div class="botones-selector">
+                        <div class="boton-verde" id="a15Puntos">15 puntos</div>
+                        <div class="boton-verde float-right" id="a30Puntos">30 puntos</div>
+                    </div>
+                </div>
+                <div class="aplicacion-container" id="app">
+                    <div class="nosotros">
+                        <div class="titulo">Nosotros</div>
+                        <div class="buenas">
+                            <div class="malas-titulo" id="titulo-malas">Malas</div>
+                            <div class="bloques" id="bloquesBuenasNosotros"></div>
+                        </div>
+                        <div class="malas" id="malasNosotros">
+                            <div class="buenas-titulo" id="titulo-buenas">Buenas</div>
+                            <div class="bloques" id="bloquesMalasNosotros"></div>
+                        </div>
+                        <div class="boton-verde efecto-click" id="subirPuntajeNosotros">Subir punto <span class="no-movil">nosotros</span></div>
+                        <div class="boton-linea-roja efecto-click" id="borrarPuntajeNosotros">Borrar punto <span class="no-movil">nosotros</span></div>
+                    </div>
+                    <div class="ellos">
+                        <div class="titulo">Ellos</div>
+                        <div class="buenas">
+                            <div class="bloques" id="bloquesBuenasEllos"></div>
+                        </div>
+                        <div class="malas" id="malasEllos">
+                            <div class="bloques" id="bloquesMalasEllos"></div>
+                        </div>
+                        <div class="boton-verde efecto-click" id="subirPuntajeEllos">Subir punto <span class="no-movil">ellos</span></div>
+                        <div class="boton-linea-roja efecto-click" id="borrarPuntajeEllos">Borrar punto <span class="no-movil">ellos</span></div>
+                    </div>
+                </div>
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="felicitaciones">¡Felicitaciones!</div>
+                        <div class="resultado" id="resultado"></div>
+                        <div class="boton-verde" id="jugarRevancha">Jugar revancha <img src="refresh.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="texto">
+                    <h2>¿Cómo usar el anotador?</h2>
+                    <p>El anotador de truco argentino te permitirá llevar la cuenta de los puntos de una partida de truco de manera online y sencilla.</p>
+                    <p>Utilizar esta aplicación es muy fácil, deberá seguir los siguientes pasos:</p>
+                    <ol>
+                        <li><strong>Seleccione</strong> la cantidad de puntos por la que se juega la partida (15 ó 30 puntos).</li>
+                        <li>Sume puntos a "Nosotros" o "Ellos" haciendo click en el botón verde de <strong>"Agregar punto a..."</strong>.</li>
+                        <li>En caso de que sea necesario, borre puntos a "Nosotros" o "Ellos" haciendo click en el botón rojo de <strong>"Borrar punto a..."</strong>.</li>
+                    </ol>
+                    <p>El primero que llegue a la cantidad de puntos seleccionada para la partida, será el ganador.</p>
+                    <p>Una vez anunciado el ganador, podrá jugar nuevamente haciendo click en el botón de <strong>"Jugar revancha"</strong>.</p>
+                    <h2>También te puede interesar:</h2>
+                    <ul class="relacionados">
+                        <li><a href="/entretenimiento/dado-online/">Tirar dado online.</a></li>
+                        <li><a href="/entretenimiento/sorteo-aleatorio/">Sorteo aleatorio.</a></li>
+                        <li><a href="/entretenimiento/ruleta-aleatoria/">Ruleta aleatoria online.</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="paneljugador col border-left" id="panelj2">
-            <div class="header-player"><p>Jugador 2</p></div>
-            <div class="botones d-flex justify-content-around">
-              <div class="b-j2">
-                <button type="button" class="btn btn-primary btn-sm">-</button>
-                <button type="button" class="btn btn-primary btn-sm">+</button>
-              </div>
+        </section>
+        <footer>
+            <div class="contain-960">
+                <div class="grudemi">
+                    Un proyecto de
+                    <a href="" rel="noreferrer" target="_blank">
+                    <img width="32px" height="32px" src="" alt="Claudio Monguzzi">
+                    </a>
+                </div>
+                <div class="links-footer">
+                <a href="">Envíanos un mensaje</a>
+                <a href="">Políticas de privacidad</a>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer></footer>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        </footer>
+        <script src="menu.js"></script>
+    </body>
 </html>
