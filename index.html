@@ -11,11 +11,10 @@
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Anotador de Truco Argentino" />
         <meta property="og:description" content="Una aplicación sencilla e intuitiva online para anotar los puntos del juego de cartas truco argentino. Selecciona partidas de 15 ó 30 puntos y anota." />
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/media.css">
-        <link rel="icon" type="image/png" href="" />
-        <link rel="canonical" href="" />
-
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media.css">
+        <link rel="icon" type="ico" href="assets/favicon/favicon.ico" />
+        
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -25,30 +24,13 @@
 
     </head>
     <body>
-        <header class="contain-960">
-            <nav id="submenu">
-                <div class="menu" id="menu-boton">
-                    Menú
-                    <i id="arrow" class="arrow down"></i>
-                </div>
-                <ul id="menu-desplegable">
-                    <a href="">
-                        <li style="border-bottom: 1px solid #eee;">Inicio</li></a>
-                    <a href=""><li>menu</li></a>
-                    <a href=""><li>menu</li></a>
-                    <a href=""><li>menu</li></a>
-                    <a href=""><li>menu</li></a>
-                    <a href=""><li>menu</li></a>
-                </ul>
-            </nav>
-        </header>
         <section class="main">
-            <link rel="stylesheet" href="css/anotador-truco.css">
-            <script async src="anotador-truco.js"></script>
+            <link rel="stylesheet" href="assets/css/anotador-truco.css">
+            <script async src="assets/js/anotador-truco.js"></script>
             <div class="aplicacion contain-728">
                 <div class="titulo-aplicacion">
                     <h1>Anotador de Truco</h1>
-                    <img width="48px" height="48px" src="anotador-de-truco.png" alt="Logo de anotador de truco online">
+                    <img width="48px" height="48px" src="assets/images/anotador-de-truco.png" alt="Logo de anotador de truco online">
                 </div>
                 <div class="aplicacion-container selector-de-puntos" id="selector-puntos">
                     <div class="titulo">¿A cuántos puntos es la partida?</div>
@@ -88,7 +70,7 @@
                     <div class="content">
                         <div class="felicitaciones">¡Felicitaciones!</div>
                         <div class="resultado" id="resultado"></div>
-                        <div class="boton-verde" id="jugarRevancha">Jugar revancha <img src="refresh.png" alt=""></div>
+                        <div class="boton-verde" id="jugarRevancha">Jugar revancha <img src="assets/images/refresh.png" alt></div>
                     </div>
                 </div>
                 <div class="texto">
@@ -102,12 +84,6 @@
                     </ol>
                     <p>El primero que llegue a la cantidad de puntos seleccionada para la partida, será el ganador.</p>
                     <p>Una vez anunciado el ganador, podrá jugar nuevamente haciendo click en el botón de <strong>"Jugar revancha"</strong>.</p>
-                    <h2>También te puede interesar:</h2>
-                    <ul class="relacionados">
-                        <li><a href="/entretenimiento/dado-online/">Tirar dado online.</a></li>
-                        <li><a href="/entretenimiento/sorteo-aleatorio/">Sorteo aleatorio.</a></li>
-                        <li><a href="/entretenimiento/ruleta-aleatoria/">Ruleta aleatoria online.</a></li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -115,16 +91,14 @@
             <div class="contain-960">
                 <div class="grudemi">
                     Un proyecto de
-                    <a href="" rel="noreferrer" target="_blank">
-                    <img width="32px" height="32px" src="" alt="Claudio Monguzzi">
+                    <a href="https://claudiomgz.netlify.app/" rel="noreferrer" target="_blank">
+                    Claudio Monguzzi
                     </a>
                 </div>
                 <div class="links-footer">
-                <a href="">Envíanos un mensaje</a>
-                <a href="">Políticas de privacidad</a>
                 </div>
             </div>
         </footer>
-        <script src="menu.js"></script>
+        <script src="assets/js/menu.js"></script>
     </body>
 </html>
